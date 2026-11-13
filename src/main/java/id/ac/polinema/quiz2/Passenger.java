@@ -15,7 +15,7 @@ public class Passenger {
     /**
      * Menyimpan kedua parameter ke field.
      *
-     * @param private passengerId kode penumpang
+     * @param passengerId kode penumpang
      * @param name nama penumpang
      */
 
