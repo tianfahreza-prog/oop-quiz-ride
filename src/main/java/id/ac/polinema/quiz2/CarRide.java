@@ -1,4 +1,4 @@
-package main.java.id.ac.polinema.quiz2;
+package id.ac.polinema.quiz2;
 
 public class CarRide extends Ride implements Insurable {
 

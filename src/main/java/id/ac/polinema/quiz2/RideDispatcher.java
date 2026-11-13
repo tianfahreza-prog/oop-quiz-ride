@@ -78,6 +78,9 @@ public class RideDispatcher {
      * @param rideId kode perjalanan yang di-checkout
      */
     public void checkout(String rideId) {
-        throw new UnsupportedOperationException("Not implemented yet");
+        Ride order = findById(rideId);
+        if (order != null) {
+            payment.pay(order.getRideId(), order.calculateFare());
+        }
     }
 }
