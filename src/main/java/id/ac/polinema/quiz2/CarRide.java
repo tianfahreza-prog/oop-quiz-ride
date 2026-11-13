@@ -1,25 +1,18 @@
 package main.java.id.ac.polinema.quiz2;
 
-import id.ac.polinema.quiz2.Insurable;
-import id.ac.polinema.quiz2.Passenger;
+public class CarRide extends Ride implements Insurable {
 
-public abstract class CarRide extends Ride implements Insurable{
-    String rideId;
-    double distanceKm;
-    Passenger passenger;
-
-    public BikeRide(String rideId, Passenger passenger, double distanceKm) {
-        this.rideId = rideId;
-        this.passenger = passenger;
-        this.distanceKm = distanceKm;
+    public CarRide(String rideId, Passenger passenger, double distanceKm) {
+        super(rideId, passenger, distanceKm);
     }
 
     @Override
     public double calculateFare() {
-        return distanceKm * 4000;
+        return getDistanceKm() * 4000.0;
     }
 
+    @Override
     public double insuranceFee() {
-        return 3000;
+        return 3000.0;
     }
 }
